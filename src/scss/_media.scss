@@ -1,0 +1,94 @@
+@media (min-width: 420px) {
+    .primary {
+        .hire-btn {
+            width: 269px;
+            margin: 0 auto;
+            margin-top: 46px;
+            display: block;
+        }
+    }
+}
+
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0px 70px;
+    }
+}
+
+
+@media (min-width: 1224px) {
+    .header {
+        &-logo {
+            width: 90px;
+        }
+
+        &-menu {
+            &__list {
+                opacity: 1;
+                position: static;
+                display: inline-flex;
+                align-items: center;
+                top: 0;
+                left: 0;
+                height: 70px;
+                background-color: $bgColor;
+                text-align: center;
+                transition: left .3s ease-in-out;
+            }
+            &__item {
+                margin-right: 30px;
+                &:last-child {
+                    margin: 0;
+                }
+            }
+            &__link {
+                position: relative;
+                padding: 0;
+                cursor: pointer;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 0;
+                    height: 2px;
+                    background-color: $hoverColor;
+                    bottom: -5px;
+                    left: 0;
+                    transition: width .3s ease-in-out;
+                }
+                &:hover::after{
+                    width: 100%;
+                }
+                &:hover {
+                    color: #362F84;
+                }
+            }
+        }
+    }
+
+    .header-menu-burger {
+        display: none;
+    }
+
+    .header-tel {
+        position: relative;
+        padding-left: 36px;
+        display: block;
+        a {
+            color: $fontColor;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 3px;
+            left: 0;
+            width: 17px;
+            height: 17px;
+            background: url(../icons/tel.svg)center (center/contain) no-repeat;
+        }
+    }
+}

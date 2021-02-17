@@ -1,0 +1,156 @@
+@import 'var';
+@import 'mixins';
+@import 'fonts';
+@import 'adaptive-font';
+@import 'null';
+
+
+body {
+    font-family: 'Gotham Pro', sans-serif;
+    background: $bgColor;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.header {
+    position: relative;
+
+    &-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 0;
+    }
+    &-logo {
+        width: 72px;
+
+        img {
+            width: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+    &-menu {
+        &__list {
+            opacity: 0;
+            position: absolute;
+            top: 105px;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+            display: none;
+            transition-property: opacity, left;
+            transition-duration: .3s;
+            transition-timing-function: ease-in-out;
+        }
+        &__list.active {
+            opacity: 1;
+            left: 0;
+            display: block;
+        }
+        &__link {
+            display: block;
+            font-size: 18px;
+            color: $fontColor;
+            padding: 20px 0;
+        }
+    }
+}
+
+.header-menu-burger {
+    position: relative;
+    width: 48px;
+    height: 4px;
+    background-color: $fontColor;
+    transition-property: width, transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 12px;
+        height: 4px;
+        width: 34px;
+        background-color: $fontColor;
+    }
+}
+
+.header-menu-burger.active {
+    width: 34px;
+    transform: rotate(45deg);
+    &::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+}
+
+.header-tel {
+    display: none;
+}
+// end header
+
+
+// start primary window
+.primary {
+    padding-top: 24px;
+
+    // primary-title
+    &-title{
+        // font-family: 'Montserrat';
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+        span {
+            color: $mainColor;
+        }
+    }
+
+    // primary .desr
+    .desr {
+        font-size: 18px;
+        margin-top: 18px;
+        line-height: 28px;
+    }
+
+    // primary .hire-btn
+    .hire-btn {
+        margin-top: 18px;
+        height: 51px;
+        width: 100%;
+        border-radius: 50px;
+        background-color: $mainColor;
+        color: #ffffff;
+
+    }
+
+    // primary-bg
+    &-bg {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        img {
+            position: absolute;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
+// primary window end
+
+
+
+
+
+
+@import "media";
+
+
+
+
