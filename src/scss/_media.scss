@@ -1,23 +1,337 @@
-@media (min-width: 420px) {
+@media(min-width: 415px) {
     .primary {
+        .descr {
+            margin-top: 25px;
+        }
+
         .hire-btn {
-            width: 269px;
-            margin: 0 auto;
-            margin-top: 46px;
-            display: block;
+            margin-top: 25px;
         }
     }
 }
 
 
-@media (min-width: 768px) {
-    .container {
-        padding: 0px 70px;
+@media(min-width: 520px) {
+    .primary {
+        &-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &-bg {
+            margin-right: -20px;
+            align-self: flex-end;
+        }
+        .hire-bottom {
+            margin-bottom: 40px;
+        }
     }
+
+    .application {
+
+		// .application__inner
+
+		&__inner {
+		}
+
+		// .application__header
+
+		&__header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+		}
+
+		// .application__title
+
+		&__title {
+            width: 151px;
+            flex: 0 0 30%;
+		}
+
+		// .application__descr
+
+		&__descr {
+            flex: 1 0 70%;
+            margin-top: 0;
+		}
+
+		// .application__footer
+
+		&__footer {
+            margin-top: 56px;
+		}
+
+		// .application__input
+
+		&__input {
+		}
+}
+.container {
+    max-width: 630px;
+}
+
+.title {
+}
+.application-form {
+}
+.input {
+
+		// .input_name
+
+		&_name {
+		}
+
+		// .input_tel
+
+		&_tel {
+		}
+}
+.application-btn {
+}
+.btn {
 }
 
 
-@media (min-width: 1224px) {
+
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 1024px;
+        padding: 0px 70px;
+    }
+    .primary {
+        position: relative;
+        &-title {
+            line-height: 43px;
+        }
+        .hire {
+            margin-top: 3rem;
+        }
+        .hire-btn {
+            margin: 0;
+            margin-top: 46px;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 1190px;
+    }
+
+    .about {
+        &__row_grid {
+            grid-template-rows: repeat(5, auto);
+            grid-template-columns: auto, minmax(330px, 550px);
+            grid-column-gap: 10px;
+        }
+        &-sub-descr {
+            grid-row: 2/3;
+        }
+        &-img {
+            grid-row: 1/4;
+        }
+        &-sub-descr {
+            margin-top: 36px;
+        }
+    }
+    .about_row {
+        display: flex;
+        align-items: baseline;
+        // justify-content: space-between;
+        justify-content: space-around;
+    }
+    .about-info__first {
+        margin-top: 47px;
+    }
+    .about-info__second {
+        margin-top: 68px;
+    }
+    .about__row-column {
+        font-size: 44px;
+        font-weight: 700;
+        color: $mainColor;
+
+        display: flex;
+        align-items: center;
+        span {
+            @include adaptiv-font(24, 0);
+            color: $fontColor;
+            display: inline-block;
+            margin-left: 10px;
+        }
+    }
+
+  // about-bottom
+    .about-bottom {
+        display: block;
+        margin-top: 92px;
+    }
+
+    // arrow
+    .arrow {
+        display: inline-block;
+        color: $fontColor;
+        cursor: pointer;
+        // position: relative;
+        position: absolute;
+        padding-right: 52px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            display: block;
+            width: 39px;
+            height: 15px;
+            background: url(../icons/arrow.svg)center/contain no-repeat;
+            transition: right .3s ease-in-out;
+        }
+
+        &:hover::after{
+            right: -21px;
+        }
+    }
+
+    // primary-about-us arrow
+    .primary-about-us {
+        display: none;
+    }
+
+
+    // primary-services arrow
+    .primary-services {
+        position: absolute;
+        right: 21px;
+    }
+
+    .inner {
+
+		// .inner_style
+
+		&_style {
+            padding: 57px 110px;
+		}
+    }
+
+}
+
+
+
+@media (min-width: 1024px) {
+    .primary {
+        &-title {
+            line-height: 47px;
+        }
+        // primary descr
+        .descr {
+            margin-top: 3rem;
+            line-height: 28px;
+        }
+
+        // primary hire-bottom
+        .hire-bottom {
+            margin-bottom: 0;
+        }
+
+        // primary hire
+        .hire {
+            margin-top: 0;
+        }
+
+        // primary hire-btn 
+        .hire-btn {
+            width: 269px;
+            transition: background-color 0.3s ease-in-out;
+            &:hover {
+                background-color: $hoverColor;
+            }
+        }
+
+        // primary .hire-bottom
+        .hire-bottom{
+            position: relative;
+        }
+
+        // primary-about-us
+        &-about-us {
+            display: block;
+            bottom: 25%;
+            left: 290px;
+            transform: translateY(50%);
+        }
+    }
+
+
+    // about
+    .about {
+        padding: 38px 0 50px;
+    }
+
+    .process {
+
+        // .process__row
+
+        &__row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 711px;
+        }
+
+        // .process__title
+
+        &__title {
+            width: 333px;
+        }
+
+        // .process__desct
+        &__desct {
+            margin: 0;
+            width: 271px;
+            margin-right: 30px;
+        }
+
+        // .process__num
+
+        &__num {
+            bottom: -30px;
+            right: -42px;
+            span {
+                font-size: 241px;
+            }
+        }
+
+        // .process__arrow
+
+        &__arrow {
+
+            // .process__arrow_left
+
+            &_left {
+                display: none;
+            }
+        }
+    }
+
+    .swipe {
+        display: none;
+    }
+
+
+}
+
+
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1440px;
+    }
     .header {
         &-logo {
             width: 90px;
@@ -91,4 +405,156 @@
             background: url(../icons/tel.svg)center (center/contain) no-repeat;
         }
     }
+
+    .about__row-column {
+        font-size: 48px;
+    }
+
+    .about {
+        padding: 46px 0 56px;
+    }
+
+    .process {
+
+        // .process__row
+
+        &__row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 711px;
+        }
+
+        // .process__title
+
+        &__title {
+            width: 333px;
+        }
+
+        // .process__desct
+        &__desct {
+            margin: 0;
+        }
+
+        // .process__num
+
+        &__num {
+            bottom: -26px;
+            right: -50px;
+            span {
+                font-size: 288px;
+            }
+        }
+
+        // .process__arrow
+
+        &__arrow {
+
+            // .process__arrow_left
+
+            &_left {
+                display: none;
+            }
+
+            // .process__arrow_right
+
+            &_right {
+                width: 85px;
+                position: absolute;
+                display: block;
+                right: -107px;
+                bottom: 50%;
+                transform: translateY(50%);
+            }
+        }
+    }
+    
+
+    .process-inner {
+        width: 85%;
+        position: relative;
+        padding: 84px 0 84px 50px;
+    }
+    .swipe {
+        display: none;
+    }
 }
+
+
+@media (min-width: 1440px) {
+    .primary-title {
+        line-height: 67px;
+    }
+
+    .descr {
+        line-height: 37px;
+    }
+
+    .about__row-column {
+        font-size: 64px;
+    }
+    .about__row-column span {
+        font-size: 24px;
+    }
+
+    .process {
+
+        // .process__row
+
+        &__row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 711px;
+        }
+
+        // .process__title
+
+        &__title {
+            width: 333px;
+        }
+        // .process__num
+
+        &__num {
+            bottom: -20px;
+        }
+
+        // .process__arrow
+
+        &__arrow {
+
+            // .process__arrow_left
+
+            &_left {
+                display: none;
+            }
+
+            // .process__arrow_right
+
+            &_right {
+                width: 85px;
+                position: absolute;
+                display: block;
+                right: -107px;
+                bottom: 50%;
+                transform: translateY(50%);
+            }
+        }
+    }
+
+    .process-inner {
+        padding: 84px 0 84px 110px;
+    }
+
+
+    .rectangle {
+        .title {
+            font-size: 36px;
+            height: 37px;
+        }
+    }
+    
+    
+}
+
+
