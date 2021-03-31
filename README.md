@@ -1,5 +1,5 @@
 ## Практика mobile first.
--Макет из Figma.
+- Макет из Figma.
 Верстка макета с исользованием препроцессора *SCSS, media queries, mixins, variables...вообщем все прелести препроцессора*. 
 </br>
 Верстал на *Grid'ах и Flex'ах*.</br>
